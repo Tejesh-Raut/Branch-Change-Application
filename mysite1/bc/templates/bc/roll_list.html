@@ -1,0 +1,11 @@
+{% extends "bc/base.html" %}
+{% block content %}
+{% for roll in rolls %}
+	<div style="margin-left:50px">
+   		<h2> Roll No: {{ roll.rollno_text }}</h2>
+   		<h4>Name :<a href="{% url "roll_detail" pk=roll.pk %}">{{ roll.name_text }}</a></h4>
+    	<h4> Branch : {{ roll.current_branch|linebreaks }}</h4>
+	</div>
+{% endfor %}
+{% endblock content %}
+

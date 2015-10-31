@@ -1,0 +1,42 @@
+					Project Features
+
+Feature:
+
+	1.	Admin registers the applicants by default functions in  djandgo and
+	then only applicant would be able to login to fill the form.
+
+	2.	After the login the form has rollnumber , name, cpi,category ,
+	current brancha and 17 choices.
+		After filing the all fields it checks the if roll number is greater than 
+	or equal to 150000000 and  < 160000000.So its in the roll starts with 
+	15 and integer. If not valid, after submitting it clears all fields does not 
+	save data and empty form reappears.
+	 	In the form , the there is the drop down list for current branch, category,
+	and 17 choices so it would be convenient for applicant to choose from the given.   
+		
+
+	3.	The applicant can also update/refill the form.
+
+	4	Our branch change algorithm implements without the blocks and tricky points
+	as were given in the outlab fo the project.
+
+	5.	It has link 'REGISTERED STUDENTS' which shows the all applicants who has filled the 	form with there roll no,name ,branch withuot any login.
+
+	6.	After all the form filling procedure admin has Export and Import options with 
+	various file formats  such as 'csv' , 'xls','html','tsv', 'ods','json','yaml' for export 
+	and 'csv' ,'xls','tsv','json','yaml' for import . 
+		But the best option for algorithm to run is 'csv'  as our python code accepts csv 
+	files with name specified in readme.txt
+	
+	7.	You must fill the form correctly as mentioned in the feature_doc.txt file
+
+	8.	Admin can import a csv to store in the database (presently our application stores a first extra column to store ID, you will have to edit the csv file before importing. In the csv file add an extra first column and store any arbit different numbers in that column for every row).
+
+	9.	Admin can export the user inputs database as csv format. To do this go to admin homepage and then click on Roll_nos link under the bc section. In the action dropdown list there are options to delete and export selected entries as a csv file and then click go to download the file ( Again the format in which we store the data in the csv file is bit different than that of sir. A extra column is added in the begining representing ID)
+
+	10.	To run the branch change algorithm presently you will have to manually run it from a makefile present in the outer mysite folder. You should provide the files input_options.csv and input_programmes.csv as given in the outlab. Now go through the terminal to the folder code and run make
+
+	11.	After running the make a allotment.csv file will be created as mentioned
+
+	12.	*Presently the algorithm has some flaws hence some of the candidates after 23rd row are not alloted properly if the input_options.csv file of the outlab resources is used. The algorithm does not detect some of the tricky cases
+

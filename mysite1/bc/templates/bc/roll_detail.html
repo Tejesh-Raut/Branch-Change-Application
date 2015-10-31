@@ -1,0 +1,14 @@
+{% extends "bc/base.html" %}
+
+{% block content %}
+    <div class="roll">
+        {% if roll.rollno_text %}
+            <div class="date">
+                {{ roll.rollno_text }}
+            </div>
+        {% endif %}
+        <a class="btn btn-default" href="{% url "roll_edit" pk=roll.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <p>{{ roll.name_text }}</p>
+        <p>{{ roll.current_branch|linebreaks }}</p>
+    </div>
+{% endblock %}

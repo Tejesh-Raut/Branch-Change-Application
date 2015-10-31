@@ -1,0 +1,11 @@
+{% extends "bc/base.html" %}
+
+{% block content %}
+	{% if user.is_authenticated %}
+    <h1 align="center">Fill the Form</h1>
+    <form method="POST" class="roll-form" align="center">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default" align="center">Save</button>
+    </form>
+    {% endif %}
+{% endblock %}
